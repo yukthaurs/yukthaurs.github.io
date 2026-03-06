@@ -1,0 +1,467 @@
+/* Minimal Portfolio - Yuktha Urs */
+
+/* CSS Variables */
+:root {
+    --navy: #0A1828;
+    --sky-blue: #178CA4;
+    --beige: #F5E6D3;
+    --teal: #1E5F74;
+    --white: #FFFFFF;
+    --light-gray: #F8F9FA;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--navy);
+    background: var(--white);
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--beige);
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: var(--teal);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--sky-blue);
+}
+
+/* Hero Section */
+.hero {
+    padding: 180px 0 120px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--beige) 100%);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--navy);
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--sky-blue);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--teal);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    border: 1px solid var(--navy);
+}
+
+.btn-primary:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+}
+
+.btn-secondary:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* Sections */
+.section {
+    padding: 100px 0;
+}
+
+.section-alt {
+    background: var(--light-gray);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--navy);
+    margin-bottom: 60px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+/* About Section */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 30px;
+    color: var(--teal);
+}
+
+/* Certifications Grid */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cert-card {
+    background: var(--white);
+    padding: 30px;
+    border: 1px solid var(--beige);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(10, 24, 40, 0.1);
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.cert-card h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.4;
+}
+
+.cert-badge {
+    background: var(--sky-blue);
+    color: var(--white);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.cert-badge.planned {
+    background: var(--teal);
+}
+
+.cert-org {
+    font-size: 0.9rem;
+    color: var(--sky-blue);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.cert-desc {
+    font-size: 0.95rem;
+    color: var(--teal);
+    line-height: 1.6;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.project-card {
+    border: 1px solid var(--beige);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(10, 24, 40, 0.1);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.project-desc {
+    font-size: 1.05rem;
+    color: var(--teal);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech-tag {
+    background: var(--beige);
+    color: var(--navy);
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+.project-links {
+    display: flex;
+    gap: 25px;
+}
+
+.project-link {
+    color: var(--sky-blue);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--navy);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.skill-category-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: var(--white);
+    color: var(--teal);
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    font-weight: 300;
+}
+
+/* Contact Section */
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: var(--teal);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--light-gray);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.contact-item:hover {
+    background: var(--beige);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+.contact-text {
+    color: var(--teal);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.resume-download {
+    margin-top: 30px;
+}
+
+/* Footer */
+.footer {
+    background: var(--navy);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-text {
+    color: var(--beige);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 140px 0 80px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.section-title,
+.cert-card,
+.project-card {
+    animation: fadeIn 0.6s ease-out;
+}
